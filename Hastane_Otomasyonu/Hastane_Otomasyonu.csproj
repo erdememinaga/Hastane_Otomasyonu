@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F73F064E-684B-4B9D-8E7B-B1844BC1C4D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hastane_Otomasyonu</RootNamespace>
+    <AssemblyName>Hastane_Otomasyonu</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="danismanlog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="danismanlog.Designer.cs">
+      <DependentUpon>danismanlog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanismanMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanismanMenu.Designer.cs">
+      <DependentUpon>DanismanMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doktorlog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doktorlog.Designer.cs">
+      <DependentUpon>doktorlog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoktorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoktorMenu.Designer.cs">
+      <DependentUpon>DoktorMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hasta.cs" />
+    <Compile Include="hastaneDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hastaneDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hastaneDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hastaneDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hastaneDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hastaneDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hastaneDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hastaneDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hastaneDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hastaneDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="randevu.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="VTB.cs" />
+    <EmbeddedResource Include="danismanlog.resx">
+      <DependentUpon>danismanlog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanismanMenu.resx">
+      <DependentUpon>DanismanMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doktorlog.resx">
+      <DependentUpon>doktorlog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoktorMenu.resx">
+      <DependentUpon>DoktorMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="hastaneDataSet.xsc">
+      <DependentUpon>hastaneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="hastaneDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hastaneDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hastaneDataSet.xss">
+      <DependentUpon>hastaneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="hastaneDataSet1.xsc">
+      <DependentUpon>hastaneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="hastaneDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hastaneDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hastaneDataSet1.xss">
+      <DependentUpon>hastaneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="hastaneDataSet2.xsc">
+      <DependentUpon>hastaneDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="hastaneDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hastaneDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hastaneDataSet2.xss">
+      <DependentUpon>hastaneDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="hastaneDataSet3.xsc">
+      <DependentUpon>hastaneDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="hastaneDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hastaneDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hastaneDataSet3.xss">
+      <DependentUpon>hastaneDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="hastaneDataSet4.xsc">
+      <DependentUpon>hastaneDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="hastaneDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hastaneDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hastaneDataSet4.xss">
+      <DependentUpon>hastaneDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saglik-bakanligi-logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\persosooo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\docctor.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
