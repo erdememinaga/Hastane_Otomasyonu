@@ -51,7 +51,7 @@ namespace Hastane_Otomasyonu
             };
             randevu r = new randevu()
             {
-                
+
 
                 doktor_adi = doktor_sec.GetItemText(doktor_sec.SelectedItem),
                 poli_adi = poli_sec.GetItemText(poli_sec.SelectedItem),
@@ -98,11 +98,11 @@ namespace Hastane_Otomasyonu
         SqlConnection con;
         private void DanismanMenu_Load(object sender, EventArgs e)
         {
-         
 
-           
+
+
             con = new SqlConnection("Data Source=DESKTOP-OFJ0EIO;Initial Catalog=hastane;Integrated Security=True");
-            
+
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("select * from poliklinikler ORDER BY poliklinik_id ASC ", con);
             da.Fill(dt);
@@ -130,10 +130,16 @@ namespace Hastane_Otomasyonu
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            con.Open();
+            SqlCommand komut = new SqlCommand("select *from tahliller where tahlil_kisi like '%" + textBox1.Text + "%'", con);
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            con.Close();
 
 
-            }
+        }
 
         private void poli_sec_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -153,5 +159,61 @@ namespace Hastane_Otomasyonu
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tahlillerigöster("select *from tahliller");
+
+        }
+        public void tahlillerigöster(string tahlil)
+        {
+            SqlDataAdapter da = new SqlDataAdapter(tahlil, con);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+
+        }
+        public void hastalarigöster(string tahlil)
+        {
+            SqlDataAdapter da = new SqlDataAdapter(tahlil, con);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView2.DataSource = ds.Tables[0];
+
+        }
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand komut = new SqlCommand("select *from hasta_kayit where hasta_tc like '%" + textBox2.Text + "%'", con);
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView2.DataSource = ds.Tables[0];
+            con.Close();
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            hastalarigöster("select *from hasta_kayit");
+        }
+
+        private void guncelle_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void guncelle_Click_1(object sender, EventArgs e)
+        {
+            
+           
+        }
     }
-    }
+
+   
+}

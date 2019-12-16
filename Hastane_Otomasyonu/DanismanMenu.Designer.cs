@@ -73,6 +73,14 @@
             this.tahlillerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tahlillerTableAdapter = new Hastane_Otomasyonu.hastaneDataSet4TableAdapters.tahlillerTableAdapter();
             this.hasta_kayitTableAdapter1 = new Hastane_Otomasyonu.hastaneDataSet2TableAdapters.hasta_kayitTableAdapter();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.guncelle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.polikliniklerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet3BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet3)).BeginInit();
@@ -83,9 +91,11 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tahlillerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // hasta_isim
@@ -348,6 +358,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.label13);
@@ -401,13 +412,20 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(149, 48);
+            this.textBox1.Location = new System.Drawing.Point(137, 55);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(239, 22);
             this.textBox1.TabIndex = 0;
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.guncelle);
+            this.tabPage3.Controls.Add(this.button5);
+            this.tabPage3.Controls.Add(this.button4);
+            this.tabPage3.Controls.Add(this.label14);
+            this.tabPage3.Controls.Add(this.label15);
+            this.tabPage3.Controls.Add(this.textBox2);
+            this.tabPage3.Controls.Add(this.dataGridView2);
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -415,6 +433,7 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Hasta Ara";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // pictureBox1
             // 
@@ -457,6 +476,81 @@
             // 
             this.hasta_kayitTableAdapter1.ClearBeforeFill = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(634, 54);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(84, 161);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(663, 236);
+            this.dataGridView2.TabIndex = 6;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(465, 65);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Ara";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(69, 71);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(120, 17);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Hasta Tc Kimlik";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(280, 34);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(80, 17);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "Hasta Ara";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(207, 65);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(239, 22);
+            this.textBox2.TabIndex = 7;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(729, 64);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // guncelle
+            // 
+            this.guncelle.Location = new System.Drawing.Point(555, 403);
+            this.guncelle.Name = "guncelle";
+            this.guncelle.Size = new System.Drawing.Size(192, 31);
+            this.guncelle.TabIndex = 12;
+            this.guncelle.Text = "Seçili Bilgileri Güncelle";
+            this.guncelle.UseVisualStyleBackColor = true;
+            this.guncelle.Click += new System.EventHandler(this.guncelle_Click_1);
+            // 
             // DanismanMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -480,9 +574,12 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tahlillerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -532,5 +629,13 @@
         private hastaneDataSet4TableAdapters.tahlillerTableAdapter tahlillerTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
         private hastaneDataSet2TableAdapters.hasta_kayitTableAdapter hasta_kayitTableAdapter1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button guncelle;
     }
 }

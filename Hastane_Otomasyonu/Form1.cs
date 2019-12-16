@@ -21,6 +21,7 @@ namespace Hastane_Otomasyonu
         {
             danismanlog danismanlog = new danismanlog();
             danismanlog.Show();
+           
         }
 
         private void btndktr_Click(object sender, EventArgs e)
